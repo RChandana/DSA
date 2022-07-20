@@ -1,3 +1,4 @@
+// Java Program to create an ArrayList with multiple Object Types.
 import java.util.ArrayList;
 public class ArrayObject{
     public static void main(String[] args){
