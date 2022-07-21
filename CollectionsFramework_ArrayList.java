@@ -43,7 +43,7 @@ class Student{
     Now use an ArrayList to add Student Objects created above which means add each Stdent Object(which corresponds to a line) into the ArrayList.*/
 
     
-// Using normal String Data type
+// 1st : Using the normal String Data type
 import java.util.List;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -77,9 +77,15 @@ public class StudentObject_1{
             while(end != -1){
                 String split = line.substring(Start, end);
                 Start = end + 1;
-                
+                end = line.indexOf(comma, Start);
+                String Split = line.substring(Start);
             }
+            String[] elements = line.split(", ");
+            List<String> list = Arrays.asList(elemnets);
+            ArrayList<String> listOfString = new ArrayList<String>(list);
+            System.out.println(listOfString);
     }
+    br.close();
     }
 }
 
@@ -89,12 +95,12 @@ public class StudentObject_1{
 
 
     
- // Using Student Object
+ // 2nd : Using Student Object
 import java.util.List;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
-public class StudentObject{
+public class StudentObject_2 {
     public static void main(String[] args){
         BufferedReader br = new BufferedReader(new FileReader("File Path"));
         StringBuffer sb = new StringBuffer();
@@ -120,7 +126,7 @@ public class StudentObject{
     }
 }
 
-// Student Class
+// Student Class for StudentObject_2 Class
 public class Student{
     int rollNumber;
     String name;
