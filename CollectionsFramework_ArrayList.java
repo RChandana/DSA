@@ -81,3 +81,7 @@ public class StudentObject{
         }
     }
 }
+
+// Student Class
+public class Student{
+}
