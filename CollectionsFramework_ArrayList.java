@@ -84,4 +84,12 @@ public class StudentObject{
 
 // Student Class
 public class Student{
+    int rollNumber;
+    String name;
+    int age;
+    double marks;
+    
+    Student(int rollNumber, String name, int age, double marks){
+        this.rollNumber = rollNumber;
+    }
 }
