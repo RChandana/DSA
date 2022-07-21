@@ -26,8 +26,7 @@ class Student{
 }
 
 
-
-------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -43,6 +42,8 @@ class Student{
     Write the above data in a text file, write a Java Program to read from the text file and create a Student Object from each line.
     Now use an ArrayList to add Student Objects created above which means add each Stdent Object(which corresponds to a line) into the ArrayList.*/
 
+    
+ // Using Student Object
 import java.util.List;
 import java.io.BufferedReader;
 import java.io.FileReader;
