@@ -43,6 +43,52 @@ class Student{
     Now use an ArrayList to add Student Objects created above which means add each Stdent Object(which corresponds to a line) into the ArrayList.*/
 
     
+// Using normal String Data type
+import java.util.List;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+public class StudentObject_1{
+    class Student{
+        int rollNumber;
+        String name;
+    int age;
+    double marks;
+    
+    Student(int rollNumber, String name, int age, double marks){
+        this.rollNumber = rollNumber;
+        this.name = name;
+        this.age = age;
+        this.marks = marks;
+    }
+    }
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new FileReader("File Path"));
+        StringBuffer sb = new StringBuffer();
+        String line;
+        while((line = br.readLine()) != null){
+            sb.append(line);
+            sb.append("\n");
+            
+            String comma = ", ";
+            int Start = 0, end;
+            end = line.indexOf(comma, Start);
+            while(end != -1){
+                String split = line.substring(Start, end);
+                Start = end + 1;
+                
+            }
+    }
+    }
+}
+
+
+
+
+
+
+    
  // Using Student Object
 import java.util.List;
 import java.io.BufferedReader;
