@@ -91,5 +91,11 @@ public class Student{
     
     Student(int rollNumber, String name, int age, double marks){
         this.rollNumber = rollNumber;
+        this.name = name;
+        this.age = age;
+        this.marks = marks;
+    }
+    public String toString(){ 
+        return "Roll Number : " + rollnumber + "Name : " + name + "Age : " + age + "Marks : " + marks;
     }
 }
