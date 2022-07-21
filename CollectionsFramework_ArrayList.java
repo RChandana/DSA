@@ -24,3 +24,60 @@ class Student{
         this.stuAddress = stuAddress;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*RollNo    Name     Age    Marks
+   101    Chandana   18      90
+    .         .       .       .
+    .         .       .       .
+    .         .       .       .
+    .         .       .       .
+    .         .       .       .
+    .         .       .       .
+    
+    Write the above data in a text file, write a Java Program to read from the text file and create a Student Object from each line.
+    Now use an ArrayList to add Student Objects created above which means add each Stdent Object(which corresponds to a line) into the ArrayList.*/
+
+import java.util.List;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+public class StudentObject{
+    public static void main(String[] args){
+        BufferedReader br = new BufferedReader(new FileReader("File Path"));
+        StringBuffer sb = new StringBuffer();
+        String line;
+        while((line = br.readLine()) != null){
+            sb.append(line);
+            sb.append("\n");
+            
+            String[] elements = line.split(", ");
+            
+            int rollNo = Integer.parseInt(elements[0].trim());
+            String name = elements[1];
+            int age = Integer.parseInt(elements[2].trim());
+            Double marks = Double.parseDouble(elements[3].trim());
+            
+            Student stu = new Student(rollNo, name, age, marks);
+            studentList.add(stu);
+        }
+        br.close();
+        for(Student info : studentList){
+            System.out.println(info);
+        }
+    }
+}
