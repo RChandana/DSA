@@ -8,8 +8,8 @@ public class Factorial {
         System.out.println("Factorial of " + num + " = " + factorial);
     }
     public static int multiplication(int num){
-        if (num >= 1){
-            return num * multiplication(num - 1);
+        if (num >= 1){                                
+            return num * multiplication(num - 1);    
         }
         else
             return 1;
