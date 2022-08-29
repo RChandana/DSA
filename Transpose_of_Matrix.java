@@ -15,3 +15,12 @@ public class Lab_1_Transpose_Matrix {
         int N[][] = new int[n][n], i, j;
      
         transpose(M, N);
+        
+        System.out.print("Transpose of the given matrix is \n");
+        for (i = 0; i < n; i++){
+            for (j = 0; j < n; j++)
+            System.out.print(N[i][j] + " ");
+            System.out.print("\n");
+        }
+    }
+}
