@@ -9,7 +9,7 @@ public class Factorial {
     }
     public static int multiplication(int num){
         if (num >= 1){                                
-            return num * multiplication(num - 1);    
+            return num * multiplication(num - 1);                          // O(1)   
         }
         else
             return 1;
