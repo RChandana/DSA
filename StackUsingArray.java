@@ -18,4 +18,11 @@ class Stack_2{
       System.out.println("Inserting " + x);
       arr[++top] = x;
     }
+    public int pop() {
+      if (isEmpty()) {
+        System.out.println("STACK EMPTY");
+        System.exit(1);
+      }
+      return arr[top--];
+    }
 
