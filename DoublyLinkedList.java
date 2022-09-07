@@ -42,3 +42,24 @@ public class Lab_2_Doubly_LinkedList {
         head = new_node;
         return;
       }
+        
+        while (temp.next != null)
+        temp = temp.next;
+      temp.next = new_node;
+      new_node.prev = temp;
+    }
+    void deleteNode(Node del_node) {
+      if (head == null || del_node == null) {
+        return;
+      }
+      if (head == del_node) {
+        head = del_node.next;
+      }
+      if (del_node.next != null) {
+        del_node.next.prev = del_node.prev;
+      }
+      if (del_node.prev != null) {
+        del_node.prev.next = del_node.next;
+      }
+  
+    }
