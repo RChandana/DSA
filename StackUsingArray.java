@@ -43,3 +43,19 @@ class Stack_2{
         System.out.println(arr[i]);
       }
     }
+    
+    public static void main(String[] args) {
+      Stack_2 stack = new Stack_2(5);
+  
+      stack.push(1);
+      stack.push(2);
+      stack.push(3);
+      stack.push(4);
+  
+      stack.pop();
+      System.out.println("\nAfter popping out");
+  
+      stack.printStack();
+  
+    }
+  }
