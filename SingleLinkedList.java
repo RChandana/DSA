@@ -93,6 +93,11 @@ class LinkedList{
       }
     }
   }
-
   
-  
+  public void printList(){
+    Node tnode = head;
+    while (tnode != null){
+      System.out.print(tnode.data + " ");
+      tnode = tnode.next;
+    }
+  }
