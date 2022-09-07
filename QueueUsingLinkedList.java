@@ -38,3 +38,11 @@ public class Lab_2_Queue {
         queueSize++;
         System.out.println("Element " + data+ " added to the queue");
     }
+    
+    public void print_frontRear() {
+        System.out.println("Front of the queue:" + front.data + " Rear of the queue:" + rear.data);
+    }
+}
+class Queue{
+    public static void main(String a[]){
+        Lab_2_Queue queue = new Lab_2_Queue();
