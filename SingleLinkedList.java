@@ -70,6 +70,29 @@ class LinkedList{
     }
     return false;
   }
+  
+  void sortLinkedList(Node head){
+    Node current = head;
+    Node index = null;
+    int temp;
+    if (head == null){
+      return;
+    } 
+    else{
+      while (current != null){
+        index = current.next;
+        while (index != null){
+          if (current.data > index.data) {
+            temp = current.data;
+            current.data = index.data;
+            index.data = temp;
+          }
+          index = index.next;
+        }
+        current = current.next;
+      }
+    }
+  }
 
   
   
