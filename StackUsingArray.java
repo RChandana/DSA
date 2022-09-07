@@ -25,4 +25,21 @@ class Stack_2{
       }
       return arr[top--];
     }
+    
+    public int size() {
+      return top + 1;
+    }
 
+    public Boolean isEmpty() {
+      return top == -1;
+    }
+
+    public Boolean isFull() {
+      return top == capacity - 1;
+    }
+  
+    public void printStack() {
+      for (int i = 0; i <= top; i++) {
+        System.out.println(arr[i]);
+      }
+    }
