@@ -101,3 +101,27 @@ class LinkedList{
       tnode = tnode.next;
     }
   }
+  
+  public static void main(String[] args){
+    LinkedList linked_list = new LinkedList();
+    linked_list.insertAtEnd(1);
+    linked_list.insertAtBeginning(2);
+    linked_list.insertAtBeginning(3);
+    linked_list.insertAtEnd(4);
+    linked_list.insertAfter(linked_list.head.next, 5);
+    System.out.println("Linked list: ");
+    linked_list.printList();
+    System.out.println("\nAfter deleting an element: ");
+    linked_list.deleteNode(3);
+    linked_list.printList();
+    System.out.println();
+    int item_to_find = 3;
+    if (linked_list.search(linked_list.head, item_to_find))
+      System.out.println(item_to_find + " is found");
+    else
+      System.out.println(item_to_find + " is not found");
+    linked_list.sortLinkedList(linked_list.head);
+    System.out.println("\nSorted List: ");
+    linked_list.printList();
+  }
+}
