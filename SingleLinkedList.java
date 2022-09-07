@@ -1,3 +1,5 @@
+// Write a Program to implement single linked list and its operations. 
+
 class LinkedList{
   Node head;
   class Node{
