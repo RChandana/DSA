@@ -73,4 +73,23 @@ public class Lab_2_Doubly_LinkedList {
       }
       System.out.println();
     }
+    
+    public static void main(String[] args) {
+        Lab_2_Doubly_LinkedList doubly_linkedlist = new Lab_2_Doubly_LinkedList();
   
+      doubly_linkedlist.insertEnd(5);
+      doubly_linkedlist.insertFront(1);
+      doubly_linkedlist.insertFront(6);
+      doubly_linkedlist.insertEnd(9);
+  
+      doubly_linkedlist.insertAfter(doubly_linkedlist.head, 11);
+  
+      doubly_linkedlist.insertAfter(doubly_linkedlist.head.next, 11);
+  
+      doubly_linkedlist.printlist(doubly_linkedlist.head);
+  
+      doubly_linkedlist.deleteNode(doubly_linkedlist.head.next.next.next.next.next);
+  
+      doubly_linkedlist.printlist(doubly_linkedlist.head);
+    }
+  }
