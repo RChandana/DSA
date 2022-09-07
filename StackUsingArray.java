@@ -8,4 +8,14 @@ class Stack_2{
       capacity = size;
       top = -1;
     }
+    
+   public void push(int x) {
+      if (isFull()) {
+        System.out.println("OverFlow\nProgram Terminated\n");
+        System.exit(1);
+      }
+  
+      System.out.println("Inserting " + x);
+      arr[++top] = x;
+    }
 
