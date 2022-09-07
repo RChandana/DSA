@@ -1,3 +1,5 @@
+// Write a Program to implement Queue operations using linked list. 
+
 public class Lab_2_Queue { 
     private Node front, rear; 
     private int queueSize; 
