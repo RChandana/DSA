@@ -63,3 +63,14 @@ public class Lab_2_Doubly_LinkedList {
       }
   
     }
+    
+    public void printlist(Node node) {
+      Node last = null;
+      while (node != null) {
+        System.out.print(node.data + "->");
+        last = node;
+        node = node.next;
+      }
+      System.out.println();
+    }
+  
