@@ -1,3 +1,5 @@
+// Write a Program to implement stack operations using arrays. 
+
 class Stack_2{
     private int arr[];
     private int top;
