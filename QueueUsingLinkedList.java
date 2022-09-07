@@ -46,3 +46,16 @@ public class Lab_2_Queue {
 class Queue{
     public static void main(String a[]){
         Lab_2_Queue queue = new Lab_2_Queue();
+        
+        queue.enqueue(15);
+        queue.enqueue(8);
+        queue.print_frontRear();
+        queue.enqueue(38);
+        queue.enqueue(32);
+        queue.dequeue();
+        queue.dequeue();
+        queue.enqueue(4);
+ 
+        queue.print_frontRear();
+    }
+}
