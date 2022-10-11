@@ -7,3 +7,14 @@ public class BinaryTreeTraversal {
     left = right = null;
     }
   }
+
+  class BinaryTree {
+    BinaryTreeTraversal root;
+  
+    BinaryTree() {
+    root = null;
+    }
+  
+    void post_order(BinaryTreeTraversal node) {
+    if (node == null)
+      return;
