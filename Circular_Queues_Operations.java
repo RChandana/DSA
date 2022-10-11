@@ -40,4 +40,23 @@ public class CircularQueue {
             }
         }
     }
+    
+    int deQueue(){
+        int element;
+        if(isEmpty()){
+            System.out.println("The queue is empty!!");
+            return (-1);
+        }
+        else{
+            element = items[front];
+            if(front == rear){
+                front = -1;
+                rear = -1;
+            }
+            else{
+                front = (front + 1) % SIZE;
+            }
+            return (element);
+        }
+    }
 
