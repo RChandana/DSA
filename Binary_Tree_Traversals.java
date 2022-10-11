@@ -18,3 +18,12 @@ public class BinaryTreeTraversal {
     void post_order(BinaryTreeTraversal node) {
     if (node == null)
       return;
+        
+         post_order(node.left);
+    post_order(node.right);
+    System.out.print(node.item + "  ");
+    }
+  
+    void inorder(BinaryTreeTraversal node) {
+    if (node == null)
+      return;
