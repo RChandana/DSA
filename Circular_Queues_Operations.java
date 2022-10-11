@@ -59,4 +59,21 @@ public class CircularQueue {
             return (element);
         }
     }
+    
+    void display(){
+        int i;
+        if(isEmpty()){
+            System.out.println("The queue is Empty.");
+        }
+        else{
+            System.out.println("Front : " + front);
+            System.out.println("Items : ");
+            for(i = front; i != rear; i = (i + 1) % SIZE){
+                System.out.print(items[i] + " ");
+                System.out.println(items[i]);    
+                System.out.println("Rear : " + rear);
+            }
+        } 
+    }
+
 
