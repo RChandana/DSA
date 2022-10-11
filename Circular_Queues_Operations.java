@@ -75,5 +75,35 @@ public class CircularQueue {
             }
         } 
     }
+    
+    public static void main(String[] args){
+        CircularQueue queue = new CircularQueue();
+
+        queue.deQueue();
+
+        queue.enQueue(12);
+        queue.enQueue(1);
+        queue.enQueue(7);
+        queue.enQueue(34);
+        queue.enQueue(44);
+
+        queue.enQueue(32);
+
+        queue.display();
+
+        int elements = queue.deQueue();
+        if(elements != -1){
+            System.out.println("Deleted element : " + elements);
+        }
+
+        queue.display();
+
+        queue.enQueue(89);
+
+        queue.display();
+
+        queue.enQueue(55);
+    }
+}
 
 
