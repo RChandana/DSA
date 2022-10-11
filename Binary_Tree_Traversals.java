@@ -27,3 +27,22 @@ public class BinaryTreeTraversal {
     void inorder(BinaryTreeTraversal node) {
     if (node == null)
       return;
+        
+            inorder(node.left);
+
+    System.out.print(node.item + "  ");
+
+    inorder(node.right);
+    }
+  
+    void pre_order(BinaryTreeTraversal node) {
+    if (node == null)
+      return;
+  
+
+    System.out.print(node.item + "  ");
+
+    pre_order(node.left);
+   
+    pre_order(node.right);
+    }
