@@ -47,3 +47,36 @@ class AVL{
  
         return height(N.left) - height(N.right);
     }
+    
+        Node insert(Node node, int key) {
+        if (node == null)
+            return (new Node(key));
+ 
+        if (key < node.key)
+            node.left = insert(node.left, key);
+
+        else if (key > node.key)
+            node.right = insert(node.right, key);
+
+        else 
+            return node;
+        node.height = 1 + max(height(node.left), height(node.right));
+        int balance = get_Balance(node);
+
+        if (balance > 1 && key < node.left.key)
+            return right_Rotate(node);
+
+        if (balance < -1 && key > node.right.key)
+            return left_Rotate(node);
+
+        if (balance > 1 && key > node.left.key) {
+            node.left = left_Rotate(node.left);
+            return right_Rotate(node);
+        }
+
+        if (balance < -1 && key < node.right.key) {
+            node.right = right_Rotate(node.right);
+            return left_Rotate(node);
+        }
+        return node;
+    }
