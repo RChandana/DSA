@@ -80,3 +80,26 @@ class AVL{
         }
         return node;
     }
+    
+    void pre_Order(Node node) {
+        if (node != null) {
+            System.out.print(node.key + " ");
+            pre_Order(node.left);
+            pre_Order(node.right);
+        }
+    }
+    public static void main(String[] args) {
+        AVL avl_tree = new AVL();
+        avl_tree.root = avl_tree.insert(avl_tree.root, 3);
+        avl_tree.root = avl_tree.insert(avl_tree.root, 2);
+        avl_tree.root = avl_tree.insert(avl_tree.root, 1);
+        avl_tree.root = avl_tree.insert(avl_tree.root, 4);
+        avl_tree.root = avl_tree.insert(avl_tree.root, 5);
+        avl_tree.root = avl_tree.insert(avl_tree.root, 6);
+        avl_tree.root = avl_tree.insert(avl_tree.root, 7);
+        avl_tree.root = avl_tree.insert(avl_tree.root, 8);
+        avl_tree.root = avl_tree.insert(avl_tree.root, 9);
+        System.out.println("The AVL Tree is : ");
+        avl_tree.pre_Order(avl_tree.root);
+    }
+}
