@@ -27,3 +27,16 @@ class Quick_Sort {
     }
   }
 }
+
+class Main {
+  public static void main(String args[]) {
+
+    int[] data = { 10, 15, 2, 55, 3, 9, 23, 87, 34 };
+    System.out.printf("Input Array : " + Arrays.toString(data) + "\n\n");
+
+    int size = data.length;
+    Quick_Sort.quick_Sort(data, 0, size - 1);
+
+    System.out.println("Quick Sorted Array : " + Arrays.toString(data) + "\n");
+  }
+}
