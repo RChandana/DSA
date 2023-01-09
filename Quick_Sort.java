@@ -12,3 +12,18 @@ class Quick_Sort {
       }
 
     }
+    
+    int temp = array[i + 1];
+    array[i + 1] = array[high];
+    array[high] = temp;
+    return (i + 1);
+  }
+
+  static void quick_Sort(int array[], int low, int high) {
+    if (low < high) {
+      int pi = partition(array, low, high);
+      quick_Sort(array, low, pi - 1);
+      quick_Sort(array, pi + 1, high);
+    }
+  }
+}
