@@ -23,3 +23,8 @@ public class DFS{
                DFS_Util(n, visited);
            }
     }
+    
+    void DFS(int v){
+        boolean visited[] = new boolean[Vertices];
+        DFS_Util(v, visited);
+    }
