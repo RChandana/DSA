@@ -48,4 +48,13 @@ class Selection_Sort_CGPA{
             Studentlist.add(st);
             no_of_students--;
         }
-
+        
+        Collections.sort(Studentlist, new Comparator<student_record>() {
+            public int compare(student_record s1, student_record s2){
+                if(s1.CGPA() > s2.CGPA()){
+                    return 1;
+                }
+                return -1;
+            }
+        }
+        );
