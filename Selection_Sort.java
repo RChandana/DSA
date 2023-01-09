@@ -29,3 +29,23 @@ class student_record {
     }
 }
 
+class Selection_Sort_CGPA{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Number of students in the class : \n");
+        int no_of_students = Integer.parseInt(sc.nextLine());
+        List<student_record > Studentlist = new ArrayList<student_record>();
+        while (no_of_students > 0) {
+            System.out.println("Enter the Name of the student : \n");
+            String name = sc.next();
+            System.out.println("Enter the student Roll Number : \n");
+            int roll_number = sc.nextInt();
+            System.out.println("Enter the Address of the student : \n");
+            String address = sc.next();
+            System.out.println("Enter the CGPA of the student : \n");
+            double CGPA = sc.nextDouble();
+            student_record st = new student_record(name, roll_number, address, CGPA);
+            Studentlist.add(st);
+            no_of_students--;
+        }
+
