@@ -14,3 +14,18 @@ class student_record {
         this.address = address;
         this.CGPA = CGPA;
     }
+    
+    String name(){
+        return name;
+    }
+    int roll_number(){
+        return roll_number;
+    }
+    String address(){
+        return address;
+    }
+    double CGPA(){
+        return CGPA;
+    }
+}
+
