@@ -58,3 +58,10 @@ class Selection_Sort_CGPA{
             }
         }
         );
+        
+        System.out.println("The Sorted Array of the student's CGPA is : \n");
+        for(student_record s: Studentlist){
+            System.out.println(s.name());
+        }
+    }
+}
