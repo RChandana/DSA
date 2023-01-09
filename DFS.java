@@ -28,3 +28,18 @@ public class DFS{
         boolean visited[] = new boolean[Vertices];
         DFS_Util(v, visited);
     }
+    
+    public static void main(String args[]){
+      DFS g = new DFS(8);
+      g.addEdge(0, 1);
+      g.addEdge(3, 2);
+      g.addEdge(3, 4);
+      g.addEdge(3, 5);
+      g.addEdge(6, 3);
+      g.addEdge(6, 7);
+      g.addEdge(7, 1);
+
+      System.out.println("DFS order : ");
+      g.DFS(3);
+    }
+}
